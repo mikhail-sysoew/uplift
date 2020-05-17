@@ -43,3 +43,36 @@ Parameters:
 
       -caliper (float) - measure of distance between examples in control and target variable to chain them in the pair. Input to nearest neighborrows algorithm
       
+### fit_model ()
+
+Fit model on variables, which was initialized in feature_names and target_name parameters in base class
+
+### predict(x=None)
+
+Predict method on new sample. Sample must contain only variables, which was initialized in feature_names in base class.
+Returns uplift score.
+
+Parameters:
+
+      -x (dataframe) - dataframe, which should be scored 
+      
+### plot_tree ()
+
+Vizualize decision tree. Model_type in base class should be equal 'tree' for use.
+
+### shift_effect()
+
+Calculate shift effect. This effect means share of uplift, that can be explained by variables shifting
+
+## plot_variable_uplift (var=None, var_type=None, bins_num=None, ntile=None, raw_data=None)
+
+Plot uplift prediction and variable distribution on target and control datasets
+
+Parametes:
+
+      - var (string) - name of the variable to plot from feature_names
+      - var_type (string) - type (numeric or cat) should be set manually
+      - raw_data (bool) - if True, plot will contain continuos x axis (only for numeric var_type)
+      - bins_num (int) - number of bins for distribution
+      - ntile (int) - number of equal parts of sample to plot. Only for raw_data = False
+
