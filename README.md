@@ -6,7 +6,7 @@ This Add-on to causalml library to measure period to period effect. Library comp
 ## Base class
 Class causal model is main class, which contains all methods, functions and temporary variables
 
- class causalmodel(model_type = None, feature_names=None, target_name=None, model_params=None)
+### class causalmodel(model_type = None, feature_names=None, target_name=None, model_params=None)
 
 Parameters:
 
@@ -34,5 +34,12 @@ Parameters:
       - None
       
 
+### bias_elimination(caliper = None)
 
+If control and target sample are biased, procedure make matching between them to eliminate this bias
+Using Nearest Neigbors matching algorithm.
+
+Parameters:
+
+      -caliper (float) - measure of distance between examples in control and target variable to chain them in the pair. Input to nearest neighborrows algorithm
       
