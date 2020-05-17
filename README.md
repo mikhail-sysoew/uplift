@@ -64,7 +64,7 @@ Vizualize decision tree. Model_type in base class should be equal 'tree' for use
 
 Calculate shift effect. This effect means share of uplift, that can be explained by variables shifting
 
-## plot_variable_uplift (var=None, var_type=None, bins_num=None, ntile=None, raw_data=None)
+### plot_variable_uplift (var=None, var_type=None, bins_num=None, ntile=None, raw_data=None)
 
 Plot uplift prediction and variable distribution on target and control datasets
 
@@ -75,4 +75,13 @@ Parametes:
       - raw_data (bool) - if True, plot will contain continuos x axis (only for numeric var_type)
       - bins_num (int) - number of bins for distribution
       - ntile (int) - number of equal parts of sample to plot. Only for raw_data = False
+
+### plot_total_uplift()
+
+Plot uplift fact and forecast for total sample (target + control)
+
+### plot_uplift_distribution()
+
+Plot uplift distribution for target and control samples
+
 
