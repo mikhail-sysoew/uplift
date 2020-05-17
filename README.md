@@ -3,7 +3,7 @@ This Add-on to causalml library to measure period to period effect. Library comp
 
 # Usage
 
-##Base class
+## Base class
 Class causal model is main class, which contains all methods, functions and temporary variables
 
  class causalmodel(model_type = None, feature_names=None, target_name=None, model_params=None)
