@@ -2,6 +2,8 @@
 This Add-on to causalml library to measure period to period effect. Library compares two samples and measure uplift effect on target variable between them.
 
 # Usage
+
+##Base class
 Class causal model is main class, which contains all methods, functions and temporary variables
 
  class causalmodel(model_type = None, feature_names=None, target_name=None, model_params=None)
@@ -15,10 +17,12 @@ Parameters:
       
       
       
-### Methods
+## Methods
 
-preprocess()
+### preprocess()
+
 Procedure, which makes 5 steps:
+
           1. Delete raws, where target is null
           2. Fill empty values with -1 for numeric and MISSING for categorial
           3. Fill outliers with >3 standart deviations with border value
